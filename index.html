@@ -11,6 +11,170 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+	<style>
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  /* padding: 2px 16px; */
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+	</style>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -80,12 +244,12 @@
 									</header>
 									<div class="posts">
 										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="images/project1.png" alt="" /></a>
 											<h3>Global Travel Advisory</h3>
 											<p style="height: 60pt;">A full stack app that will show a traveler to search and create travel advisories</p>
 											<ul class="actions">
-												<li><a href="#" class="button">Live Demo</a></li>
-												<li><a href="#" class="button">View on Github</a></li>
+												<li><a href="https://youtu.be/JDaFAx3B0uM" target="_blank" class="button">Live Demo</a></li>
+												<li><a href="https://github.com/Tianyi-Li/GlobalTravelAdvisory.git" target="_blank" class="button">View on Github</a></li>
 											</ul>
 											<img src="images/node.svg" alt="" style="width: 48px;"/>
 											<img src="images/expressjs.svg" alt="" style="width: 48px; height: 48px;"/>
@@ -94,12 +258,12 @@
 											<img src="images/graphql.png" alt="" style="width: 96px; height: 48px;"/>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="images/stark.PNG" alt="" /></a>
 											<h3>Realtime Chat</h3>
 											<p style="height: 60pt;">Created a mobile PWA (Progressive Web App) multiple-user real-time chat application utilizing Socket.IO and run it from Heroku</p>
 											<ul class="actions">
-												<li><a href="#" class="button">Live Demo</a></li>
-												<li><a href="#" class="button">View on Github</a></li>
+												<li><a href="https://tianyili-chatapp.herokuapp.com/" target="_blank" class="button">Live Demo</a></li>
+												<li><a href="https://github.com/Tianyi-Li/chatitup.git" target="_blank" class="button">View on Github</a></li>
 											</ul>
 											<img src="images/node.svg" alt="" style="width: 48px;"/>
 											<img src="images/react.svg" alt="" style="width: 48px;"/>
@@ -108,24 +272,53 @@
 											<img src="images/pwa.png" alt="" style="width: 84px; height: 48px;"/>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="images/laptop.png" alt="" /></a>
 											<h3>Online Shopping Laptops</h3>
 											<p style="height: 60pt;">A web application that users can register an account to order various brands of laptop </p>
 											<ul class="actions">
-												<li><a href="#" class="button">Live Demo</a></li>
-												<li><a href="#" class="button">View on Github</a></li>
+												<li><a href="http://tianyilaptop.azurewebsites.net" target="_blank" class="button">Live Demo</a></li>
+												<li><a href="https://github.com/Tianyi-Li/LaptopWebsite.git" target="_blank" class="button">View on Github</a></li>
 											</ul>
 											<img src="images/netcore.png" alt="" style="width: 48px;"/>
 											<img src="images/vue.png" alt="" style="width: 48px;"/>
 											<img src="images/azure.png" alt="" style="width: 96px; height: 48px;"/>
+											<img src="images/jquery.png" alt="" style="width: 96px; height: 48px;"/>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											
+												<!-- <img src="images/contacts.png" alt="" /> -->
+												<div class="container">
+													<div class="mySlides">
+														<a href="#" class="image">
+														<img id="contact1b" src="images/contact1.png" alt="" style="width: 100%"/>
+													</a>
+													</div>
+													<div class="mySlides">
+														<a href="#" class="image">
+														<img id="contact2b" src="images/contact2.jpg" alt="" style="width: 100%"/>
+													</a>
+													</div>
+													<div class="mySlides">
+														<a href="#" class="image">
+														<img id="contact3b" src="images/contact3.png" alt="" style="width: 100%"/>
+													</a>
+													</div>
+													<div class="mySlides">
+														<a href="#" class="image">
+														<img id="contact4b" src="images/contact4.png" alt="" style="width: 100%"/>
+													</a>
+													</div>
+												
+
+													<a class="prev" onclick="plusSlides(-1)" style="border-bottom: none;">❮</a>
+													<a class="next" onclick="plusSlides(1)" style="border-bottom: none;">❯</a>
+												</div>
+											
 											<h3>Contacts Phone Book</h3>
 											<p style="height: 60pt;">A mobile app that using Firebase to authenticate a user and save contact details to Cloud </p>
 											<ul class="actions">
-												<li><a href="#" class="button">Live Demo</a></li>
-												<li><a href="#" class="button">View on Github</a></li>
+												<!-- <li><a href="#" class="button">Live Demo</a></li> -->
+												<li><a href="https://github.com/Tianyi-Li/ContactsBook.git" target="_blank" class="button">View on Github</a></li>
 											</ul>
 										</article>
 										<article>
@@ -143,7 +336,7 @@
 											<p style="height: 60pt;">A Windows console application that reads an expression and outputs the result</p>
 											<ul class="actions">
 												<li><a href="#" class="button">Live Demo</a></li>
-												<li><a href="#" class="button">View on Github</a></li>
+												<li><a href="#" class="button" >View on Github</a></li>
 											</ul>
 										</article>
 									</div>
@@ -201,7 +394,11 @@
 					</div>
 
 			</div>
-
+			<div id="myModal" class="modal">
+				<span class="close">&times;</span>
+				<img class="modal-content" id="img01">
+				<div id="caption"></div>
+			  </div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
@@ -209,5 +406,78 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<script>
+				var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("demo");
+//   var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+//   for (i = 0; i < dots.length; i++) {
+//       dots[i].className = dots[i].className.replace(" active", "");
+//   }
+  slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+//   captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var contact1b = document.getElementById("contact1b");
+var contact2b = document.getElementById("contact2b");
+var contact3b = document.getElementById("contact3b");
+var contact4b = document.getElementById("contact4b");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+contact1b.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = "images/contact1b.png";
+  captionText.innerHTML = this.alt;
+}
+contact2b.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = "images/contact2b.jpg";
+  captionText.innerHTML = this.alt;
+}
+
+contact3b.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = "images/contact3b.png";
+  captionText.innerHTML = this.alt;
+}
+
+contact4b.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = "images/contact4b.png";
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+			</script>
 	</body>
 </html>
