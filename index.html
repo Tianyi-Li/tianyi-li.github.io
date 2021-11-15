@@ -303,7 +303,7 @@
 											<img src="images/pwa.png" alt="" style="width: 84px; height: 48px;"/>
 										</article>
 										<article>
-											<a href="#" class="image"><img id="pagerank1" src="images/EasyNote.png" alt="" /></a>
+											<a href="#" class="image"><img id="easynote" src="images/EasyNote.png" alt="" /></a>
 											<h3>Easy Note</h3>
 											<p style="height: 60pt;">This is a user-friendly and smart note-taking app. CRUD functionalities using SQLite. Text Recognition (ML Kit) Digital Ink Recognition (ML Kit)  </p>
 											<ul class="actions">
@@ -345,7 +345,9 @@
 											<ul class="actions">
 												<!-- <li><a href="#" class="button">Live Demo</a></li> -->
 												<li><a href="https://github.com/Tianyi-Li/Blackjack.git" target="_blank" class="button" >View on Github</a></li>
+												<li><a href="https://screencast-o-matic.com/watch/cYfQe6avK1" target="_blank" class="button" >Video Demo</a></li>
 											</ul>
+											<img src="images/wcf.png" alt="" style="width: 108px; height: 48px;"/>
 										</article>
 										<article>
 											
@@ -495,6 +497,7 @@ var contact3b = document.getElementById("contact3b");
 var contact4b = document.getElementById("contact4b");
 var pagerank1 = document.getElementById("pagerank1");
 var blackjack1 = document.getElementById("blackjack1");
+var easynote = document.getElementById("easynote");
 
 
 var modalImg = document.getElementById("img01");
@@ -533,6 +536,13 @@ blackjack1.onclick = function(){
   modal.style.display = "block";
   modalImg.src = "";
   modalImg1.src = "images/blackjack1b.png";
+  captionText.innerHTML = this.alt;
+}
+
+easynote.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = "";
+  modalImg1.src = "images/EasyNote.png";
   captionText.innerHTML = this.alt;
 }
 
